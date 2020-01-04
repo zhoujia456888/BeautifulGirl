@@ -18,7 +18,7 @@ class FrontCoverAdapter(ckInitems: Elements) :
             .into(helper.getView(R.id.img_front_cover))
 
 
-        val title = ckInitem.select("div.ck-gallery-title").text()
-        helper.setText(R.id.txt_title, title)
+      /*  val title = ckInitem.select("div.ck-gallery-title").text()
+        helper.setText(R.id.txt_title, title)*/
     }
 }

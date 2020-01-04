@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.PicturesDetailsActivity"/>
         <activity android:name=".activity.PhotoViewAcivity" />
     </application>
 

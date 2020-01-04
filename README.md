@@ -13,9 +13,9 @@
 ## 截图
 
 
-<img src="1.jpg" alt="Drawing" width="250px" />   &nbsp;&nbsp;
-<img src="2.jpg" alt="Drawing" width="250px" />   &nbsp;&nbsp;
-<img src="3.jpg" alt="Drawing" width="250px" />
+<img src="img/1.png" alt="Drawing" width="250px" />   &nbsp;&nbsp;
+<img src="img/2.png" alt="Drawing" width="250px" />   &nbsp;&nbsp;
+<img src="img/3.png" alt="Drawing" width="250px" />
 
 
 ## 感谢
