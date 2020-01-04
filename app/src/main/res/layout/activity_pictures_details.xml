@@ -11,7 +11,7 @@
         android:background="@android:color/white"
         app:srlAccentColor="@android:color/white"
         app:srlEnableHeaderTranslationContent="false"
-        app:srlEnableLoadMore="true"
+        app:srlEnableLoadMore="false"
         app:srlPrimaryColor="@color/colorPrimary">
 
         <com.scwang.smartrefresh.header.MaterialHeader

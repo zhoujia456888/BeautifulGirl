@@ -18,13 +18,12 @@ class PhotoViewAdapter(photoList: MutableList<String>) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         var photoView = PhotoView(container.context)
 
-      /*  var uri = Uri.parse(photoList[position])
-        photoView.setImageURI(uri)*/
+        /*  var uri = Uri.parse(photoList[position])
+          photoView.setImageURI(uri)*/
 
 
-        Glide.with(photoView).load(Uri.parse(photoList[position])).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher)
+        Glide.with(photoView).load(Uri.parse(photoList[position])).placeholder(R.mipmap.transparent).error(R.mipmap.ic_error)
             .into(photoView)
-
 
         container.addView(photoView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
 
