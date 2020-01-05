@@ -29,7 +29,7 @@ class PhotoViewAcivity : BaseActivity() {
         var position = intent.getIntExtra("position", 0)
         photoUrls = intent.getStringArrayListExtra("photoUrls")
 
-        txt_position.text = "$position/${photoUrls.size}"
+        txt_position.text = "${position+1}/${photoUrls.size}"
 
         var photoViewAdapter = PhotoViewAdapter(photoUrls)
         view_pager.adapter = photoViewAdapter
@@ -43,7 +43,7 @@ class PhotoViewAcivity : BaseActivity() {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
             override fun onPageSelected(position: Int) {
-                txt_position.text = "$position/${photoUrls.size}"
+                txt_position.text = "${position+1}/${photoUrls.size}"
             }
         })
 

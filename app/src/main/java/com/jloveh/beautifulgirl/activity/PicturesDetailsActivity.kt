@@ -7,7 +7,6 @@ import com.blankj.utilcode.util.LogUtils
 import com.jloveh.beautifulgirl.R
 import com.jloveh.beautifulgirl.adapter.PicturesDetailsAdapter
 import com.jloveh.beautifulgirl.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_pictures_details.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -68,11 +67,13 @@ class PicturesDetailsActivity : BaseActivity() {
     private fun analyzeData() {
         GlobalScope.launch(Dispatchers.IO) {
             val doc: Document = Jsoup.connect(url).userAgent(MainActivity.saiBanUserAgent).get()
-            val ck_icon = doc.select("a[href]")
-            val ck_link = ck_icon.select("a.ck-link")
+            val ck_parent_divs = doc.select("div.ck-parent-div")
 
-            //获取女神编号
-            val grilNo = ck_link[0].attr("abs:href").split("/")[4]
+            //获取第一张图片的地址
+            val photoOneUrl = ck_parent_divs[0].select("img[src]").attr("src")
+
+            //截取图片的头部
+            val photoUrlHead = photoOneUrl.substring(0, photoOneUrl.lastIndexOf("/") + 1)
 
             //获取整个图片组的图片张数
             val pageSize = doc.select("span").text().split("张")[0].toInt()
@@ -84,7 +85,8 @@ class PicturesDetailsActivity : BaseActivity() {
                 if (index > 0) {
                     indexStr = DecimalFormat("000").format(index)
                 }
-                var photoUrl = "${photoBaseUrl}$grilNo/$phptosNo/$indexStr.jpg"
+                var photoUrl = "$photoUrlHead$indexStr.jpg"
+                LogUtils.e(photoUrl)
                 photoUrls.add(photoUrl)
             }
 
