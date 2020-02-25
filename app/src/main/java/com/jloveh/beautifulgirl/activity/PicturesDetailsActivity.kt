@@ -56,7 +56,6 @@ class PicturesDetailsActivity : BaseActivity() {
         }
 
 
-
         refreshlayout_pictures_details.setOnRefreshListener {
             analyzeData()
         }
