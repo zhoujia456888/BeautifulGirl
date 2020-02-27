@@ -18,6 +18,11 @@
 <img src="img/3.png" alt="Drawing" width="250px" />
 
 
+2020年02月27日更新
+是的，很惨，昨天打开软件发现满屏的盗链提示，官方又开始检测盗链了，因此这个项目可能要废弃了。现在也没有过多地时间去研究这种盗链的解决方法，就先这样吧。<br>
+<img src="img/4.png" alt="Drawing" width="250px" />   &nbsp;&nbsp;
+
+
 ## 感谢
 * [Jsoup](https://www.open-open.com/jsoup/)
 * [AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md)
