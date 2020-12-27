@@ -23,7 +23,7 @@ import org.jsoup.select.Elements
 class MainActivity : BaseActivity() {
 
     companion object {
-        var nvshensUrl = "https://m.nvshens.net/gallery/"
+        var nvshensUrl = "https://m.nvshens.org/gallery/"
         val saiBanUserAgent =
             "Nokia5320/04.13 (SymbianOS/9.3; U; Series60/3.2 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413\n"
     }
